@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Function prototypes
+// functions
 void monthly_sales_report(double sales[]);
 void sales_summary_report(double sales[]);
 void six_month_moving_average_report(double sales[]);
@@ -11,7 +11,7 @@ int main() {
                         60200.22, 72400.31, 56210.89, 67230.84, 68233.12, 
                         80950.34, 95225.22};
 
-    // Generating reports
+    // making reports
     monthly_sales_report(sales);
     sales_summary_report(sales);
     six_month_moving_average_report(sales);
@@ -20,7 +20,7 @@ int main() {
     return 0;
 }
 
-// Print the Monthly Sales Report
+// print monthly sales 
 void monthly_sales_report(double sales[]) {
     printf("Monthly Sales Report for 2024\n");
     for (int i = 0; i < 12; i++) {
@@ -29,7 +29,7 @@ void monthly_sales_report(double sales[]) {
     printf("\n");
 }
 
-// Print the Sales Summary Report
+// print sales summary 
 void sales_summary_report(double sales[]) {
     double min = sales[0], max = sales[0], sum = 0;
 
@@ -44,7 +44,7 @@ void sales_summary_report(double sales[]) {
     printf("Average: $%.2f\n\n", sum / 12);
 }
 
-// Print the Six-Month Moving Average Report
+// print the report
 void six_month_moving_average_report(double sales[]) {
     printf("Six-Month Moving Average Report:\n");
     for (int i = 0; i <= 6; i++) {
@@ -57,14 +57,14 @@ void six_month_moving_average_report(double sales[]) {
     printf("\n");
 }
 
-// Print the Sales Report (Highest to Lowest)
+// print sales report from high to low
 void sales_report_high_to_low(double sales[]) {
     double sorted_sales[12];
     for (int i = 0; i < 12; i++) {
         sorted_sales[i] = sales[i];  // Copy sales array
     }
 
-    // Sort sales in descending order
+    // sort sales in leastt order
     for (int i = 0; i < 12; i++) {
         for (int j = i + 1; j < 12; j++) {
             if (sorted_sales[i] < sorted_sales[j]) {
